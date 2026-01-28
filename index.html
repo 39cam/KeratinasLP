@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keratinas orgánicas</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <style>
+      header {
+        background-color: var(--segundo);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      header nav {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0.4rem;
+      }
+
+      .imglogo {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-family: "Sora-Bold";
+        color: var(--tercero);
+        text-decoration: none;
+      }
+
+      .imglogo img {
+        display: flex;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0;
+        margin-block: 0;
+      }
+
+      li {
+        box-sizing: border-box;
+      }
+
+      li a {
+        display: flex;
+        padding-block: 0.4rem;
+        padding-inline: 1.2rem;
+        font-family: "Sora-Bold";
+        color: var(--tercero);
+        text-decoration: none;
+        transition: 0.5s;
+        border-radius: clamp(0.2rem, 4vh, 0.4rem);
+        box-sizing: border-box;
+      }
+
+      li a:hover {
+        color: var(--segundo);
+        background-color: var(--tercero);
+      }
+    </style>
+
+    <header>
+      <nav>
+        <a class="imglogo" href="index.html"
+          ><img src="./img/" alt="Logo de Keratinas orgánicas"
+        /></a>
+        <ul>
+          <li><a href="">Servicios</a></li>
+          <li><a href="">Nosotras</a></li>
+          <li><a href="">Galería</a></li>
+          <li><a href="">Contactanos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+:root{
+    --primero: #fafafa;
+    --segundo: #4db2dd;
+    --tercero: #001935;
+}
+
+@font-face {
+    font-family: 'Sora-Bold';
+    src: url(./fonts/Sora-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-ExtraBold';
+    src: url(./fonts/Sora-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Extralight';
+    src: url(./fonts/Sora-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Light';
+    src: url(./fonts/Sora-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Medium';
+    src: url(./fonts/Sora-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Regular';
+    src: url(./fonts/Sora-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Semibold';
+    src: url(./fonts/Sora-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Sora-Thin';
+    src: url(./fonts/Sora-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-Bold';
+    src: url(./fonts/RedditSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-ExtraBold';
+    src: url(./fonts/RedditSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-ExtraLight';
+    src: url(./fonts/RedditSans-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-Italic';
+    src: url(./fonts/RedditSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-Light';
+    src: url(./fonts/RedditSans-Light.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-Medium';
+    src: url(./fonts/RedditSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-MediumItalic';
+    src: url(./fonts/RedditSans-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-Regular';
+    src: url(./fonts/RedditSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'RedditSans-SemiBold';
+    src: url(./fonts/RedditSans-SemiBold.ttf);
+}
+
+body{
+    max-width: 1440px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--primero);
+    font-family: 'RedditSans-Light';
+    /* Sora-Bold para titulos */
+    /* RedditSans-Light para textos */
+}
