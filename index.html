@@ -88,10 +88,10 @@
       <nav aria-label="Navegación principal">
         <a class="imglogo" href="index.html">Keratinas Orgánicas</a>
         <ul>
-          <li><a href="">Servicios</a></li>
-          <li><a href="">Nosotras</a></li>
-          <li><a href="">Galería</a></li>
-          <li><a href="">Contactanos</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#us">Nosotras</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#contact">Contactanos</a></li>
         </ul>
       </nav>
     </header>
@@ -112,14 +112,14 @@
         align-content: center;
         align-items: stretch;
         justify-content: center;
-        margin: clamp(.8rem, 15vh, 1rem) auto 0 auto;
+        margin: clamp(0.8rem, 15vh, 1rem) auto 0 auto;
         box-sizing: border-box;
         gap: clamp(0.8rem, 6vh, 1.5rem);
         padding: clamp(0.6rem, 15vh, 1rem);
       }
 
       .container1 > article:first-child {
-        flex: 1 1 280px;
+        flex: 1 1 360px;
         max-width: 80%;
         box-sizing: border-box;
         display: flex;
@@ -148,7 +148,6 @@
         background-color: var(--segundo);
         padding-block: clamp(0.8rem, 12vh, 1.5rem);
         gap: clamp(0.2rem, 4vh, 0.8rem);
-
 
         header {
           display: flex;
@@ -195,7 +194,7 @@
         p {
           color: var(--tercero);
           margin: clamp(0.2rem, 4vh, 0.5rem);
-          font-size: clamp(0.4rem, 8vh, 0.9rem);
+          font-size: clamp(0.4rem, 8vh, 1rem);
         }
       }
     </style>
@@ -365,6 +364,151 @@
           </div>
         </article>
       </section>
+
+      <style>
+        .container2 {
+          width: 95%;
+          margin: 0 auto;
+          margin-block: clamp(0.8rem, 10vh, 1.6rem);
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          gap: clamp(0.8rem, 10vh, 1.5rem);
+          box-sizing: border-box;
+          padding: clamp(0.8rem, 10vh, 1.2rem);
+        }
+
+        .container2 header {
+          width: 100%;
+          background-color: transparent;
+          text-align: center;
+          font-family: "Sora-Bold";
+          color: var(--tercero);
+
+          h2 {
+            margin: 0;
+          }
+        }
+
+        .services {
+          width: 95%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          align-content: center;
+          margin: 0 auto;
+          gap: clamp(0.8rem, 10vh, 1.6rem);
+
+          header {
+            width: 100%;
+          }
+
+          p {
+            font-size: clamp(0.5rem, 8vh, 1.1rem);
+          }
+        }
+
+        .services article:first-child {
+          flex: 1 1 450px;
+          max-width: 100%;
+
+          header h3 {
+            margin: 0;
+            padding: 0;
+          }
+
+          .primero {
+            text-align: center;
+          }
+
+          .segundo {
+            text-align: start;
+          }
+        }
+
+        .services article:last-child {
+          flex: 1 1 450px;
+          max-width: 100%;
+
+          header h3 {
+            margin: 0;
+            padding: 0;
+          }
+
+          .primero {
+            text-align: center;
+          }
+
+          .segundo {
+            text-align: start;
+          }
+        }
+      </style>
+
+      <section class="container2" id="services">
+        <header>
+          <h2>Servicios</h2>
+        </header>
+
+        <div class="services">
+          <article>
+            <header>
+              <h3>Choque de aminoácidos</h3>
+            </header>
+
+            <p class="primero">¿Cabello reseco? Esta es la solución</p>
+            <p class="segundo">
+              El choque de aminoácidos actúa directo en la fibra capilar,
+              penetrando donde el cabello más lo necesita. Esta combinación
+              inteligente repone la hidratación, fortalece desde adentro y sella
+              la suavidad, dejando el pelo visiblemente más sano, brillante y
+              manejable desde la primera aplicación. Cuidado real, resultados
+              que se sienten.
+            </p>
+          </article>
+
+          <article>
+            <header>
+              <h3>Keratina progresiva</h3>
+            </header>
+
+            <p class="primero">¿Frizz incontrolable? Necesitas una keratina</p>
+            <p class="segundo">
+              La keratina ayuda a alinear y suavizar la fibra capilar,
+              reduciendo el frizz y facilitando un alisado natural y duradero.
+              Su acción nutritiva mejora la textura del cabello, aportando
+              brillo, disciplina y una apariencia visiblemente más prolija sin
+              perder movimiento. Cabello más liso, más manejable y con un
+              acabado hermoso.
+            </p>
+          </article>
+        </div>
+
+        <style>
+          .container2 footer {
+            width: 100%;
+            text-align: center;
+            color: var(--tercero);
+            font-family: "Sora-Bold";
+          }
+
+          .container2 footer h3 {
+            margin: 0;
+            padding: 0;
+          }
+        </style>
+
+        <footer>
+          <h3>Recuerda... No vendemos el producto, lo aplicamos</h3>
+        </footer>
+      </section>
+
+      <section class="container3" id="us">
+
+        
+      </section>
+
     </main>
 
     <footer></footer>
