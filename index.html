@@ -504,11 +504,73 @@
         </footer>
       </section>
 
+      <style>
+        .container3 {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          gap: clamp(0.8rem, 10vh, 1.5rem);
+
+          header {
+            background-color: transparent;
+          }
+
+          header h2 {
+            margin: 0;
+            color: var(--tercero);
+            font-family: "Sora-Bold";
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+
+        .gridus {
+          width: 98%;
+          display: grid;
+          justify-content: center;
+          align-content: center;
+          grid-auto-columns: 1fr;
+          gap: clamp(0.5rem, 10vh, .8rem);
+          grid-template-areas:
+            "location1 location1 info1 info1 info1"
+            "info2 info2 info2 location2 location2";
+          justify-content: center;
+          margin: 0 auto;
+        }
+
+        .gridus div:nth-child(1) {
+          grid-area: location1;
+          background-color: red;
+        }
+
+        .gridus div:nth-child(2) {
+          grid-area: info1;
+          background-color: orange;
+        }
+
+        .gridus div:nth-child(3) {
+          grid-area: location2;
+          background-color: blue;
+        }
+
+        .gridus div:nth-child(4) {
+          grid-area: info2;
+          background-color: aqua;
+        }
+      </style>
+
       <section class="container3" id="us">
-
-        
+        <header>
+          <h2>Nosotras</h2>
+        </header>
+        <article class="gridus">
+          <div>hola</div>
+          <div>hola</div>
+          <div>hola</div>
+          <div>hola</div>
+        </article>
       </section>
-
     </main>
 
     <footer></footer>
