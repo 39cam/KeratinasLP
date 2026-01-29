@@ -693,7 +693,8 @@
         flex-flow: column wrap;
         align-content: center;
         margin: 0 auto;
-        margin-block: clamp(2.4rem, 10vh, 2.6rem);
+        margin-top: clamp(2.4rem, 10vh, 2.6rem);
+        margin-bottom: clamp(5rem, 16vh, 8rem);
       }
 
       .container4 header {
@@ -738,17 +739,29 @@
           height: 100%;
           position: absolute;
           box-sizing: border-box;
+          transition: 1s;
         }
 
         video {
+          border-radius: clamp(0.4rem, 4vh, 0.8rem);
           object-fit: cover;
           object-position: center;
-          box-sizing: border-box;
           width: 100%;
           height: 100%;
           position: absolute;
+          box-sizing: border-box;
+          transition: 1s;
         }
       }
+
+      .container4 article>div img:hover, .container4 article>div img:active {
+        opacity: 0;
+      }
+
+      .container4 article>div video:hover, .container4 article>div video:active {
+        opacity: 0;
+      }
+
 
       .container4 article>div:nth-child(1) {
         grid-area: img1;
@@ -800,6 +813,7 @@
 
         .container4 {
           width: 92%;
+          margin-bottom: clamp(7rem, 16vh, 9rem);
         }
 
         .container4 article {
@@ -820,6 +834,7 @@
 
         .container4 {
           width: 92%;
+          margin-bottom: clamp(10rem, 16vh, 12rem);
         }
 
         .container4 article {
@@ -888,7 +903,30 @@
     </section>
   </main>
 
-  <footer></footer>
+  <style>
+    .futer{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: var(--tercero);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: center;
+      margin-bottom: clamp(.8rem, 12vh, 1.5rem);
+
+      p{
+        color: var(--segundo);
+        margin: 0;
+        padding-block: clamp(.5rem, 12vh, .8rem);
+      }
+    }
+  </style>
+
+  <footer class="futer">
+    <p>Proyecto familiar: Hermanitas Castillo</p>
+    <p>Keratinas orgánicas y servicios de calidad</p>
+  </footer>
 </body>
 
 </html>
