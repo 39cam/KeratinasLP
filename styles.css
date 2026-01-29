@@ -96,6 +96,7 @@ body {
   padding: 0;
   background-color: var(--primero);
   font-family: "RedditSans-Light";
+  position: relative;
   /* Sora-Bold para titulos */
   /* RedditSans-Light para textos */
 }
