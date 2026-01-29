@@ -27,6 +27,9 @@
         margin: 0 auto;
         padding: 0.4rem;
         gap: 0.6rem;
+        box-shadow:
+          0 8px 12px rgba(18, 0, 36, 0.13),
+          inset 0 0 12px rgba(18, 0, 36, 0.199);
       }
 
       .imglogo {
@@ -146,6 +149,10 @@
         align-content: center;
         box-sizing: border-box;
         background-color: var(--segundo);
+        backdrop-filter: blur(8px);
+        box-shadow:
+          0 8px 12px rgba(18, 0, 36, 0.192),
+          inset 0 0 12px rgba(18, 0, 36, 0.35);
         padding-block: clamp(0.8rem, 12vh, 1.5rem);
         gap: clamp(0.2rem, 4vh, 0.8rem);
 
@@ -153,6 +160,7 @@
           display: flex;
           width: 100%;
           margin: 0 auto;
+          background-color: transparent;
           font-family: "Sora-Bold";
 
           h2 {
@@ -161,6 +169,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            background-color: transparent;
             font-size: clamp(0.6rem, 9vh, 1.2rem);
             color: var(--tercero);
             text-align: center;
@@ -526,59 +535,158 @@
         }
 
         .gridus {
-          width: 80%;
+          width: 92%;
           display: grid;
           justify-content: center;
           align-content: center;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: clamp(0.5rem, 10vh, 0.8rem);
           grid-template-areas:
-            "location1 location1 info1 info1 info1"
-            "info2 info2 info2 location2 location2";
+            "location1 info1 info1 info1 contactiner1 contactiner1"
+            "contactiner2 contactiner2 info2 info2 info2 location2";
           justify-content: center;
           margin: 0 auto;
         }
 
+        .gridus > div {
+          border-radius: clamp(0.4rem, 4vh, 0.6rem);
+          box-shadow:
+            0 8px 12px rgba(18, 0, 36, 0.192),
+            inset 0 0 12px rgba(18, 0, 36, 0.35);
+        }
+
         .gridus div:nth-child(1) {
           grid-area: location1;
-          background-color: red;
+          background-color: var(--tercero);
         }
 
         .gridus div:nth-child(2) {
           grid-area: info1;
-          background-color: orange;
+          background-color: var(--segundo);
         }
 
         .gridus div:nth-child(3) {
-          grid-area: location2;
-          background-color: aqua;
+          grid-area: contactiner1;
+          background-color: var(--primero);
+          box-sizing: border-box;
         }
 
         .gridus div:nth-child(4) {
+          grid-area: location2;
+          background-color: var(--tercero);
+        }
+
+        .gridus div:nth-child(5) {
           grid-area: info2;
-          background-color: blue;
+          background-color: var(--segundo);
+        }
+
+        .gridus div:nth-child(6) {
+          grid-area: contactiner2;
+          background-color: var(--primero);
         }
       </style>
 
       <style>
-        @media (width <= 600px) {
+        @media (width <= 700px) {
           .gridus {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-              "location1 info1 info1"
-              "info2 info2 location2";
+              "location1 info1 info1 contactiner1"
+              "contactiner2 info2 info2 location2";
           }
         }
 
-        @media (width <= 400px) {
+        @media (width <= 500px) {
           .gridus {
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas:
               "location1"
+              "contactiner1"
               "info1"
               "location2"
+              "contactiner2"
               "info2";
           }
+        }
+
+        .info-us {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        .info-us p {
+          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+        }
+
+        .city {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+        }
+
+        .city h3 {
+          margin: 0 auto;
+          padding: clamp(0.4rem, 10vh, 0.6rem);
+          font-family: "Sora-Bold";
+          color: var(--segundo);
+          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+          text-align: center;
+        }
+
+        .contactiner {
+          padding-block: clamp(1.4rem, 10vh, 2rem);
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          box-sizing: border-box;
+          gap: clamp(0.4rem, 10vh, 0.8rem);
+        }
+
+        .contactiner h3 {
+          margin: 0 auto;
+          padding: 0;
+          font-family: "Sora-Bold";
+          color: var(--tercero);
+          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+          text-align: center;
+        }
+
+        .contactiner ul {
+          gap: 0;
+          align-content: center;
+          justify-content: center;
+          list-style: none;
+          display: flex;
+          flex-flow: column;
+          flex-wrap: wrap;
+        }
+
+        .contactiner ul li {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          margin: 0;
+          text-align: center;
+        }
+
+        .contactiner ul li a {
+          font-family: "RedditSans-Light";
+          text-decoration: none;
+          box-sizing: border-box;
+          color: var(--tercero);
+          text-align: center;
+          padding: clamp(0.1rem, 5vh, 0.4rem);
+          margin: 0 auto;
+          margin-block: clamp(0.1rem, 5vh, 0.2rem);
+        }
+
+        .contactiner ul li a:hover {
+          color: var(--segundo);
+          background-color: var(--tercero);
         }
       </style>
 
@@ -587,20 +695,66 @@
           <h2>Nosotras</h2>
         </header>
         <article class="gridus">
-          <div>
-
+          <div class="city">
+            <h3>Bogotá D.C</h3>
           </div>
 
-          <div>
-
+          <div class="info-us">
+            <p>
+              Soy <strong>Nury Castillo</strong>, especialista en keratina y
+              tratamientos de choque para devolverle vida, suavidad y brillo a
+              tu cabello. Resultados visibles desde la primera sesión.
+            </p>
           </div>
 
-          <div>
-
+          <div class="contactiner">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/573133652835"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  +57 313 365 2835
+                </a>
+              </li>
+              <li>
+                <a href="mailto:nujucas@gmail.com"> nujucas@gmail.com </a>
+              </li>
+            </ul>
           </div>
 
-          <div>
-            
+          <div class="city">
+            <h3>Fusagasugá</h3>
+          </div>
+
+          <div class="info-us">
+            <p>
+              Soy <strong>Marcela Castillo</strong>, ofrezco tratamientos de
+              keratina y choque capilar para un cabello más sano, manejable y
+              brillante. Ideal para cabello maltratado o con frizz.
+            </p>
+          </div>
+
+          <div class="contactiner">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/573246106598"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  +57 324 610 6598
+                </a>
+              </li>
+              <li>
+                <a href="mailto:marce-2283@hotmail.com">
+                  marce-2283@hotmail.com
+                </a>
+              </li>
+            </ul>
           </div>
         </article>
       </section>
