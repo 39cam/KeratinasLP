@@ -526,12 +526,12 @@
         }
 
         .gridus {
-          width: 98%;
+          width: 80%;
           display: grid;
           justify-content: center;
           align-content: center;
-          grid-auto-columns: 1fr;
-          gap: clamp(0.5rem, 10vh, .8rem);
+          grid-template-columns: repeat(5, 1fr);
+          gap: clamp(0.5rem, 10vh, 0.8rem);
           grid-template-areas:
             "location1 location1 info1 info1 info1"
             "info2 info2 info2 location2 location2";
@@ -551,12 +551,34 @@
 
         .gridus div:nth-child(3) {
           grid-area: location2;
-          background-color: blue;
+          background-color: aqua;
         }
 
         .gridus div:nth-child(4) {
           grid-area: info2;
-          background-color: aqua;
+          background-color: blue;
+        }
+      </style>
+
+      <style>
+        @media (width <= 600px) {
+          .gridus {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+              "location1 info1 info1"
+              "info2 info2 location2";
+          }
+        }
+
+        @media (width <= 400px) {
+          .gridus {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+              "location1"
+              "info1"
+              "location2"
+              "info2";
+          }
         }
       </style>
 
@@ -565,10 +587,21 @@
           <h2>Nosotras</h2>
         </header>
         <article class="gridus">
-          <div>hola</div>
-          <div>hola</div>
-          <div>hola</div>
-          <div>hola</div>
+          <div>
+
+          </div>
+
+          <div>
+
+          </div>
+
+          <div>
+
+          </div>
+
+          <div>
+            
+          </div>
         </article>
       </section>
     </main>
