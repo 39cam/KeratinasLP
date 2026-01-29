@@ -1,766 +1,865 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keratinas orgánicas</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="icon" href="./img/girl.png">
-  </head>
-  <body>
-    <style>
-      header {
-        background-color: var(--segundo);
-        width: 100%;
-        margin: 0 auto 0 auto;
-        padding: 0;
-        font-size: clamp(0.4rem, 8vh, 0.9rem);
-      }
 
-      header nav {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keratinas orgánicas</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="./img/girl.png" />
+</head>
+
+<body>
+  <style>
+    header {
+      background-color: var(--segundo);
+      width: 100%;
+      margin: 0 auto 0 auto;
+      padding: 0;
+      font-size: clamp(0.4rem, 8vh, 0.9rem);
+    }
+
+    header nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0.4rem;
+      gap: 0.6rem;
+      box-shadow:
+        0 8px 12px rgba(18, 0, 36, 0.13),
+        inset 0 0 12px rgba(18, 0, 36, 0.199);
+    }
+
+    .imglogo {
+      flex: 0 0 140px;
+      max-width: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      font-family: "Sora-Bold";
+      color: var(--tercero);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .imglogo img {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      height: 32px;
+      text-align: center;
+    }
+
+    ul {
+      flex: 0 0 520px;
+      max-width: 100%;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      gap: 0.6rem;
+      padding: 0;
+      margin-block: 0;
+    }
+
+    li {
+      box-sizing: border-box;
+    }
+
+    li a {
+      display: flex;
+      padding-block: 0.5rem;
+      padding-inline: 1.4rem;
+      font-family: "Sora-Bold";
+      color: var(--tercero);
+      text-decoration: none;
+      transition: 0.5s;
+      box-sizing: border-box;
+    }
+
+    li a:hover {
+      border-radius: clamp(0.2rem, 4vh, 0.4rem);
+      color: var(--segundo);
+      background-color: var(--tercero);
+    }
+  </style>
+
+  <header>
+    <nav aria-label="Navegación principal">
+      <a class="imglogo" href="index.html">Keratinas Orgánicas</a>
+      <ul>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#us">Nosotras</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#contact">Contactanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <style>
+    main {
+      background-color: var(--primero);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container1 {
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
+      align-items: stretch;
+      justify-content: center;
+      margin: clamp(0.8rem, 15vh, 1rem) auto 0 auto;
+      box-sizing: border-box;
+      gap: clamp(0.8rem, 6vh, 1.5rem);
+      padding: clamp(0.6rem, 15vh, 1rem);
+    }
+
+    .container1>article:first-child {
+      flex: 1 1 360px;
+      max-width: 80%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      img {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: stretch;
+        height: auto;
         box-sizing: border-box;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+
+    .container1>article:last-child {
+      border-radius: clamp(0.4rem, 4vh, 0.8rem);
+      justify-content: space-evenly;
+      transition: 3s;
+      flex: 1 1 500px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      box-sizing: border-box;
+      background-color: var(--segundo);
+      backdrop-filter: blur(8px);
+      box-shadow:
+        0 8px 12px rgba(18, 0, 36, 0.192),
+        inset 0 0 12px rgba(18, 0, 36, 0.35);
+      padding-block: clamp(0.8rem, 12vh, 1.5rem);
+      gap: clamp(0.2rem, 4vh, 0.8rem);
+
+      header {
+        display: flex;
+        width: 100%;
         margin: 0 auto;
-        padding: 0.4rem;
-        gap: 0.6rem;
-        box-shadow:
-          0 8px 12px rgba(18, 0, 36, 0.13),
-          inset 0 0 12px rgba(18, 0, 36, 0.199);
+        background-color: transparent;
+        font-family: "Sora-Bold";
+
+        h2 {
+          width: 85%;
+          margin: 0 auto;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          background-color: transparent;
+          font-size: clamp(0.6rem, 9vh, 1.2rem);
+          color: var(--tercero);
+          text-align: center;
+        }
+      }
+    }
+
+    .info-product {
+      padding-block: clamp(0.3rem, 4vh, 0.5rem);
+      width: 85%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      gap: clamp(0.5rem, 10vh, 1rem);
+    }
+
+    .info-product article {
+      flex: 1 1 100px;
+      max-width: 90%;
+      text-align: center;
+      box-sizing: border-box;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: var(--tercero);
+        margin: clamp(0.2rem, 4vh, 0.5rem);
+        font-size: clamp(0.4rem, 8vh, 1rem);
+      }
+    }
+  </style>
+
+  <main>
+    <section class="container1">
+      <!-- Article 1 Container 1 -->
+
+      <article>
+        <img src="./img/girl.png" alt="" />
+      </article>
+
+      <!-- Article 2 Container 1 -->
+
+      <article>
+        <header>
+          <h2>Beneficios del producto utilizado</h2>
+        </header>
+
+        <div class="info-product">
+          <article>
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                  fill="#150029"></path>
+                <path
+                  d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z"
+                  fill="#150029"></path>
+              </g>
+            </svg>
+            <p>Efecto progresivo</p>
+          </article>
+
+          <article>
+            <svg width="50px" height="50px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M24.0005 27C18.3431 27 14.065 22.6575 14.065 17L14 7L19.0005 11L24.0005 5L29.0005 11L34.0005 7V17C34.0005 22.6575 29.658 27 24.0005 27Z"
+                  fill="#2F88FF00" stroke="#150029" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M23.4862 43.3137C25.0483 41.7516 23.1488 37.3195 19.2436 33.4142C15.3383 29.509 10.9062 27.6095 9.34408 29.1715C7.78199 30.7336 9.68146 35.1658 13.5867 39.0711C17.492 42.9763 21.9241 44.8758 23.4862 43.3137Z"
+                  fill="#2F88FF00" stroke="#150029" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M24.8289 42.9706C26.391 44.5327 30.8231 42.6332 34.7283 38.7279C38.6336 34.8227 40.5331 30.3905 38.971 28.8285C37.4089 27.2664 32.9767 29.1658 29.0715 33.0711C25.1662 36.9763 23.2668 41.4085 24.8289 42.9706Z"
+                  fill="#2F88FF00" stroke="#150029" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <p>Natural</p>
+          </article>
+
+          <article>
+            <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z"
+                  stroke="#150029" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path
+                  d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z"
+                  stroke="#150029" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+            <p>Brillo</p>
+          </article>
+
+          <article>
+            <svg fill="#150029" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <path
+                      d="M495.301,14.16H391.564c-9.222,0-16.699,7.477-16.699,16.699v27.328l-32.695-27.43 c-9.006-7.557-20.442-11.718-32.199-11.718H153.473c-11.758,0-23.194,4.162-32.201,11.719l-102.57,86.06 c-21.47,18.015-24.974,50.27-7.811,71.902c18.078,22.785,51.248,26.095,73.455,7.46l79.115-66.383h37.109 c-18.518,7.578-31.898,25.423-32.467,46.179c-0.797,29.074,22.487,52.93,51.476,52.93h155.285v15.706 c0,9.222,7.477,16.699,16.699,16.699H495.3c9.222,0,16.699-7.477,16.699-16.699V30.858C512,21.635,504.523,14.16,495.301,14.16z M374.868,195.508H219.581v0.001c-10.134,0-18.373-8.325-18.092-18.618c0.266-9.693,8.706-17.578,18.815-17.578 c7.262,0,59.115,0,65.689,0c9.222,0,16.699-7.477,16.699-16.699c0-9.222-7.477-16.699-16.699-16.699h-29.59l-25.868-21.703 c-6.005-5.038-13.629-7.813-21.467-7.813h-45.607c-7.838,0-15.462,2.774-21.468,7.814l-79.115,66.383 c-7.745,6.497-19.411,5.448-25.824-2.634c-6.027-7.596-4.629-19.062,3.115-25.559L142.74,56.341 c3.002-2.519,6.814-3.906,10.734-3.906h156.499c3.919,0,7.73,1.387,10.733,3.906l54.161,45.44V195.508z M478.602,227.914h-70.339 c0-7.002,0-171.742,0-180.358h70.339V227.914z">
+                    </path>
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M308.487,273.754c-23.996,0-41.49,10.567-52.537,20.341c-11.047-9.774-28.541-20.341-52.537-20.341 c-40.555,0-69.236,36.769-69.236,80.261c0,63.02,57.582,111.628,113.877,141.839c4.932,2.646,10.861,2.646,15.793,0 c99.082-53.17,113.876-111.689,113.876-141.839C377.723,310.59,349.095,273.754,308.487,273.754z M255.951,462.067 c-40.552-23.027-88.375-61.7-88.375-108.053c0-23.036,13.406-46.864,35.838-46.864c24.283,0,37.353,19.194,38.358,20.728 c6.479,10.84,21.879,10.838,28.357,0c1.005-1.534,14.075-20.728,38.358-20.728c22.432,0,35.838,23.827,35.838,46.864 C344.325,400.379,296.502,439.04,255.951,462.067z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <p>Cuidado</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <style>
+      .container2 {
+        width: 95%;
+        margin: 0 auto;
+        margin-block: clamp(0.8rem, 10vh, 1.6rem);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: clamp(0.8rem, 10vh, 1.5rem);
+        box-sizing: border-box;
+        padding: clamp(0.8rem, 10vh, 1.2rem);
       }
 
-      .imglogo {
-        flex: 0 0 140px;
-        max-width: 100%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+      .container2 header {
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
         font-family: "Sora-Bold";
         color: var(--tercero);
-        text-decoration: none;
-        text-align: center;
+
+        h2 {
+          margin: 0;
+        }
       }
 
-      .imglogo img {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        height: 32px;
-        text-align: center;
-      }
-
-      ul {
-        flex: 0 0 520px;
-        max-width: 100%;
-        list-style: none;
+      .services {
+        width: 95%;
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
         align-content: center;
-        gap: 0.6rem;
-        padding: 0;
-        margin-block: 0;
+        margin: 0 auto;
+        gap: clamp(0.8rem, 10vh, 1.6rem);
+
+        header {
+          width: 100%;
+        }
+
+        p {
+          font-size: clamp(0.5rem, 8vh, 1.1rem);
+        }
       }
 
-      li {
+      .services article:first-child {
+        flex: 1 1 450px;
+        max-width: 100%;
+
+        header h3 {
+          margin: 0;
+          padding: 0;
+        }
+
+        .primero {
+          text-align: center;
+        }
+
+        .segundo {
+          text-align: start;
+        }
+      }
+
+      .services article:last-child {
+        flex: 1 1 450px;
+        max-width: 100%;
+
+        header h3 {
+          margin: 0;
+          padding: 0;
+        }
+
+        .primero {
+          text-align: center;
+        }
+
+        .segundo {
+          text-align: start;
+        }
+      }
+    </style>
+
+    <section class="container2" id="services">
+      <header>
+        <h2>Servicios</h2>
+      </header>
+
+      <div class="services">
+        <article>
+          <header>
+            <h3>Choque de aminoácidos</h3>
+          </header>
+
+          <p class="primero">¿Cabello reseco? Esta es la solución</p>
+          <p class="segundo">
+            El choque de aminoácidos actúa directo en la fibra capilar,
+            penetrando donde el cabello más lo necesita. Esta combinación
+            inteligente repone la hidratación, fortalece desde adentro y sella
+            la suavidad, dejando el pelo visiblemente más sano, brillante y
+            manejable desde la primera aplicación. Cuidado real, resultados
+            que se sienten.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h3>Keratina progresiva</h3>
+          </header>
+
+          <p class="primero">¿Frizz incontrolable? Necesitas una keratina</p>
+          <p class="segundo">
+            La keratina ayuda a alinear y suavizar la fibra capilar,
+            reduciendo el frizz y facilitando un alisado natural y duradero.
+            Su acción nutritiva mejora la textura del cabello, aportando
+            brillo, disciplina y una apariencia visiblemente más prolija sin
+            perder movimiento. Cabello más liso, más manejable y con un
+            acabado hermoso.
+          </p>
+        </article>
+      </div>
+
+      <style>
+        .container2 footer {
+          width: 100%;
+          text-align: center;
+          color: var(--tercero);
+          font-family: "Sora-Bold";
+        }
+
+        .container2 footer h3 {
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+
+      <footer>
+        <h3>Recuerda... No vendemos el producto, lo aplicamos</h3>
+      </footer>
+    </section>
+
+    <style>
+      .container3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: clamp(0.8rem, 10vh, 1.5rem);
+
+        header {
+          background-color: transparent;
+        }
+
+        header h2 {
+          margin: 0;
+          color: var(--tercero);
+          font-family: "Sora-Bold";
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+
+      .gridus {
+        width: 92%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(6, 1fr);
+        gap: clamp(0.5rem, 10vh, 0.8rem);
+        grid-template-areas:
+          "location1 info1 info1 info1 contactiner1 contactiner1"
+          "contactiner2 contactiner2 info2 info2 info2 location2";
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .gridus>div {
+        border-radius: clamp(0.4rem, 4vh, 0.6rem);
+        box-shadow:
+          0 8px 12px rgba(18, 0, 36, 0.192),
+          inset 0 0 12px rgba(18, 0, 36, 0.35);
+      }
+
+      .gridus div:nth-child(1) {
+        grid-area: location1;
+        background-color: var(--tercero);
+      }
+
+      .gridus div:nth-child(2) {
+        grid-area: info1;
+        background-color: var(--segundo);
+      }
+
+      .gridus div:nth-child(3) {
+        grid-area: contactiner1;
+        background-color: var(--primero);
         box-sizing: border-box;
       }
 
-      li a {
+      .gridus div:nth-child(4) {
+        grid-area: location2;
+        background-color: var(--tercero);
+      }
+
+      .gridus div:nth-child(5) {
+        grid-area: info2;
+        background-color: var(--segundo);
+      }
+
+      .gridus div:nth-child(6) {
+        grid-area: contactiner2;
+        background-color: var(--primero);
+      }
+    </style>
+
+    <style>
+      @media (width <=700px) {
+        .gridus {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-areas:
+            "location1 info1 info1 contactiner1"
+            "contactiner2 info2 info2 location2";
+        }
+      }
+
+      @media (width <=500px) {
+        .gridus {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-areas:
+            "location1"
+            "contactiner1"
+            "info1"
+            "location2"
+            "contactiner2"
+            "info2";
+        }
+      }
+
+      .info-us {
         display: flex;
-        padding-block: 0.5rem;
-        padding-inline: 1.4rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .info-us p {
+        padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+      }
+
+      .city {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+
+      .city h3 {
+        margin: 0 auto;
+        padding: clamp(0.4rem, 10vh, 0.6rem);
+        font-family: "Sora-Bold";
+        color: var(--segundo);
+        padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+        text-align: center;
+      }
+
+      .contactiner {
+        padding-block: clamp(1.4rem, 10vh, 2rem);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        box-sizing: border-box;
+        gap: clamp(0.4rem, 10vh, 0.8rem);
+      }
+
+      .contactiner h3 {
+        margin: 0 auto;
+        padding: 0;
         font-family: "Sora-Bold";
         color: var(--tercero);
-        text-decoration: none;
-        transition: 0.5s;
-        box-sizing: border-box;
+        padding-inline: clamp(0.8rem, 10vh, 1.2rem);
+        text-align: center;
       }
 
-      li a:hover {
-        border-radius: clamp(0.2rem, 4vh, 0.4rem);
+      .contactiner ul {
+        gap: 0;
+        align-content: center;
+        justify-content: center;
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+      }
+
+      .contactiner ul li {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0;
+        text-align: center;
+      }
+
+      .contactiner ul li a {
+        font-family: "RedditSans-Light";
+        text-decoration: none;
+        box-sizing: border-box;
+        color: var(--tercero);
+        text-align: center;
+        padding: clamp(0.1rem, 5vh, 0.4rem);
+        padding-inline: clamp(0.6rem, 5vh, 1rem);
+        margin: 0 auto;
+        margin-block: clamp(0.1rem, 5vh, 0.2rem);
+      }
+
+      .contactiner ul li a:hover {
         color: var(--segundo);
         background-color: var(--tercero);
       }
     </style>
 
-    <header>
-      <nav aria-label="Navegación principal">
-        <a class="imglogo" href="index.html">Keratinas Orgánicas</a>
-        <ul>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#us">Nosotras</a></li>
-          <li><a href="#gallery">Galería</a></li>
-          <li><a href="#contact">Contactanos</a></li>
-        </ul>
-      </nav>
-    </header>
+    <section class="container3" id="us">
+      <header>
+        <h2>Nosotras</h2>
+      </header>
+      <article class="gridus">
+        <div class="city">
+          <h3>Bogotá D.C</h3>
+        </div>
+
+        <div class="info-us">
+          <p>
+            Soy <strong>Nury Castillo</strong>, especialista en keratina y
+            tratamientos de choque para devolverle vida, suavidad y brillo a
+            tu cabello. Resultados visibles desde la primera sesión.
+          </p>
+        </div>
+
+        <div class="contactiner">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <a href="https://wa.me/573133652835" target="_blank" rel="noopener">
+                +57 313 365 2835
+              </a>
+            </li>
+            <li>
+              <a href="mailto:nujucas@gmail.com"> nujucas@gmail.com </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="city">
+          <h3>Fusagasugá</h3>
+        </div>
+
+        <div class="info-us">
+          <p>
+            Soy <strong>Marcela Castillo</strong>, ofrezco tratamientos de
+            keratina y choque capilar para un cabello más sano, manejable y
+            brillante. Ideal para cabello maltratado o con frizz.
+          </p>
+        </div>
+
+        <div class="contactiner">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <a href="https://wa.me/573246106598" target="_blank" rel="noopener">
+                +57 324 610 6598
+              </a>
+            </li>
+            <li>
+              <a href="mailto:marce-2283@hotmail.com">
+                marce-2283@hotmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
 
     <style>
-      main {
-        background-color: var(--primero);
+      .container4 {
+        width: 85%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-flow: column wrap;
+        align-content: center;
+        margin: 0 auto;
+        margin-block: clamp(2.4rem, 10vh, 2.6rem);
       }
 
-      .container1 {
-        width: 95%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: center;
-        align-items: stretch;
-        justify-content: center;
-        margin: clamp(0.8rem, 15vh, 1rem) auto 0 auto;
-        box-sizing: border-box;
-        gap: clamp(0.8rem, 6vh, 1.5rem);
-        padding: clamp(0.6rem, 15vh, 1rem);
-      }
+      .container4 header {
+        width: 100%;
+        margin-bottom: clamp(1.6rem, 10vh, 2rem);
+        background-color: transparent;
+        text-align: center;
+        font-family: "Sora-Bold";
+        color: var(--tercero);
 
-      .container1 > article:first-child {
-        flex: 1 1 360px;
-        max-width: 80%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-
-        img {
-          width: 100%;
-          height: auto;
-          box-sizing: border-box;
-          object-fit: cover;
-          border-radius: 1rem;
+        h2 {
+          margin: 0;
         }
       }
 
-      .container1 > article:last-child {
+      .container4 article {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 200px;
+        gap: clamp(.6rem, 10vh, 1.2rem);
+        grid-template-areas:
+          "img1 img2 img2 img3 img4"
+          "img1 img5 img6 img6 img6"
+          "img7 img7 img8 img10 img9";
+      }
+
+      .container4 article>div {
         border-radius: clamp(0.4rem, 4vh, 0.8rem);
-        justify-content: space-evenly;
-        transition: 3s;
-        flex: 1 1 500px;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
+        overflow: hidden;
+        display: grid;
+        position: relative;
         box-sizing: border-box;
-        background-color: var(--segundo);
-        backdrop-filter: blur(8px);
         box-shadow:
           0 8px 12px rgba(18, 0, 36, 0.192),
           inset 0 0 12px rgba(18, 0, 36, 0.35);
-        padding-block: clamp(0.8rem, 12vh, 1.5rem);
-        gap: clamp(0.2rem, 4vh, 0.8rem);
 
-        header {
-          display: flex;
+        img {
+          border-radius: clamp(0.4rem, 4vh, 0.8rem);
+          object-fit: cover;
+          object-position: center;
           width: 100%;
-          margin: 0 auto;
-          background-color: transparent;
-          font-family: "Sora-Bold";
+          height: 100%;
+          position: absolute;
+          box-sizing: border-box;
+        }
 
-          h2 {
-            width: 85%;
-            margin: 0 auto;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: transparent;
-            font-size: clamp(0.6rem, 9vh, 1.2rem);
-            color: var(--tercero);
-            text-align: center;
-          }
+        video {
+          object-fit: cover;
+          object-position: center;
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          position: absolute;
         }
       }
 
-      .info-product {
-        padding-block: clamp(0.3rem, 4vh, 0.5rem);
-        width: 85%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
-        gap: clamp(0.5rem, 10vh, 1rem);
+      .container4 article>div:nth-child(1) {
+        grid-area: img1;
       }
 
-      .info-product article {
-        flex: 1 1 100px;
-        max-width: 90%;
-        text-align: center;
-        box-sizing: border-box;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+      .container4 article>div:nth-child(2) {
+        grid-area: img2;
+      }
 
-        p {
-          color: var(--tercero);
-          margin: clamp(0.2rem, 4vh, 0.5rem);
-          font-size: clamp(0.4rem, 8vh, 1rem);
+      .container4 article>div:nth-child(3) {
+        grid-area: img3;
+        box-sizing: border-box;
+
+        img {
+          width: 120%;
+          height: auto;
+        }
+      }
+
+      .container4 article>div:nth-child(4) {
+        grid-area: img4;
+      }
+
+      .container4 article>div:nth-child(5) {
+        grid-area: img5;
+      }
+
+      .container4 article>div:nth-child(6) {
+        grid-area: img6;
+      }
+
+      .container4 article>div:nth-child(7) {
+        grid-area: img7;
+      }
+
+      .container4 article>div:nth-child(8) {
+        grid-area: img8;
+      }
+
+      .container4 article>div:nth-child(9) {
+        grid-area: img9;
+      }
+
+      .container4 article>div:nth-child(10) {
+        grid-area: img10;
+      }
+
+      @media (width <=700px) {
+
+        .container4 {
+          width: 92%;
+        }
+
+        .container4 article {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 180px;
+          gap: clamp(.6rem, 10vh, 1.2rem);
+          grid-template-areas:
+            "img1 img2 img2"
+            "img1 img3 img4"
+            "img5 img6 img6"
+            "img7 img7 img9"
+            "img8 img10 img10";
+        }
+      }
+
+      @media (width <=700px) {
+
+        .container4 {
+          width: 92%;
+        }
+
+        .container4 article {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 150px;
+          gap: clamp(.6rem, 10vh, 1.2rem);
+          grid-template-areas:
+            "img1 img2"
+            "img1 img3"
+            "img4 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10";
         }
       }
     </style>
 
-    <main>
-      <section class="container1">
-        <!-- Article 1 Container 1 -->
+    <section class="container4" id="gallery">
+      <header>
+        <h2>Galería</h2>
+      </header>
 
-        <article>
-          <img src="./img/girl.png" alt="" />
-        </article>
+      <article>
+        <div><img src="./img/pictest.jpeg" alt="" loading="lazy" /></div>
+        <div><img src="./img/img1.jpeg" alt="" loading="lazy" /></div>
+        <div><img src="./img/diana.jpg" alt="" loading="lazy" /></div>
+        <div><img src="./img/img3.jpeg" alt="" loading="lazy" /></div>
+        <div><img src="./img/img4.jpeg" alt="" loading="lazy" /></div>
+        <div><img src="./img/img5.jpeg" alt="" loading="lazy" /></div>
+        <div><video src="./video/choque.mp4" muted autoplay loop loading="lazy"></video></div>
+        <div><img src="./img/img6.jpeg" alt="" loading="lazy" /></div>
+        <div><video src="./video/choque2.mp4" muted autoplay loop loading="lazy"></div>
+        <div><img src="./img/carmen.jpg" alt="" loading="lazy" /></div>
+      </article>
+    </section>
+  </main>
 
-        <!-- Article 2 Container 1 -->
+  <footer></footer>
+</body>
 
-        <article>
-          <header>
-            <h2>Beneficios del producto utilizado</h2>
-          </header>
-
-          <div class="info-product">
-            <article>
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
-                    fill="#150029"
-                  ></path>
-                  <path
-                    d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z"
-                    fill="#150029"
-                  ></path>
-                </g>
-              </svg>
-              <p>Efecto progresivo</p>
-            </article>
-
-            <article>
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M24.0005 27C18.3431 27 14.065 22.6575 14.065 17L14 7L19.0005 11L24.0005 5L29.0005 11L34.0005 7V17C34.0005 22.6575 29.658 27 24.0005 27Z"
-                    fill="#2F88FF00"
-                    stroke="#150029"
-                    stroke-width="4"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M23.4862 43.3137C25.0483 41.7516 23.1488 37.3195 19.2436 33.4142C15.3383 29.509 10.9062 27.6095 9.34408 29.1715C7.78199 30.7336 9.68146 35.1658 13.5867 39.0711C17.492 42.9763 21.9241 44.8758 23.4862 43.3137Z"
-                    fill="#2F88FF00"
-                    stroke="#150029"
-                    stroke-width="4"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M24.8289 42.9706C26.391 44.5327 30.8231 42.6332 34.7283 38.7279C38.6336 34.8227 40.5331 30.3905 38.971 28.8285C37.4089 27.2664 32.9767 29.1658 29.0715 33.0711C25.1662 36.9763 23.2668 41.4085 24.8289 42.9706Z"
-                    fill="#2F88FF00"
-                    stroke="#150029"
-                    stroke-width="4"
-                    stroke-miterlimit="10"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </g>
-              </svg>
-              <p>Natural</p>
-            </article>
-
-            <article>
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M10 4C10 7.31371 7.31371 10 4 10C7.31371 10 10 12.6863 10 16C10 12.6863 12.6863 10 16 10C12.6863 10 10 7.31371 10 4Z"
-                    stroke="#150029"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M17.5 15C17.5 16.3807 16.3807 17.5 15 17.5C16.3807 17.5 17.5 18.6193 17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C18.6193 17.5 17.5 16.3807 17.5 15Z"
-                    stroke="#150029"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </g>
-              </svg>
-              <p>Brillo</p>
-            </article>
-
-            <article>
-              <svg
-                fill="#150029"
-                height="50px"
-                width="50px"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 511.999 511.999"
-                xml:space="preserve"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g>
-                    <g>
-                      <path
-                        d="M495.301,14.16H391.564c-9.222,0-16.699,7.477-16.699,16.699v27.328l-32.695-27.43 c-9.006-7.557-20.442-11.718-32.199-11.718H153.473c-11.758,0-23.194,4.162-32.201,11.719l-102.57,86.06 c-21.47,18.015-24.974,50.27-7.811,71.902c18.078,22.785,51.248,26.095,73.455,7.46l79.115-66.383h37.109 c-18.518,7.578-31.898,25.423-32.467,46.179c-0.797,29.074,22.487,52.93,51.476,52.93h155.285v15.706 c0,9.222,7.477,16.699,16.699,16.699H495.3c9.222,0,16.699-7.477,16.699-16.699V30.858C512,21.635,504.523,14.16,495.301,14.16z M374.868,195.508H219.581v0.001c-10.134,0-18.373-8.325-18.092-18.618c0.266-9.693,8.706-17.578,18.815-17.578 c7.262,0,59.115,0,65.689,0c9.222,0,16.699-7.477,16.699-16.699c0-9.222-7.477-16.699-16.699-16.699h-29.59l-25.868-21.703 c-6.005-5.038-13.629-7.813-21.467-7.813h-45.607c-7.838,0-15.462,2.774-21.468,7.814l-79.115,66.383 c-7.745,6.497-19.411,5.448-25.824-2.634c-6.027-7.596-4.629-19.062,3.115-25.559L142.74,56.341 c3.002-2.519,6.814-3.906,10.734-3.906h156.499c3.919,0,7.73,1.387,10.733,3.906l54.161,45.44V195.508z M478.602,227.914h-70.339 c0-7.002,0-171.742,0-180.358h70.339V227.914z"
-                      ></path>
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path
-                        d="M308.487,273.754c-23.996,0-41.49,10.567-52.537,20.341c-11.047-9.774-28.541-20.341-52.537-20.341 c-40.555,0-69.236,36.769-69.236,80.261c0,63.02,57.582,111.628,113.877,141.839c4.932,2.646,10.861,2.646,15.793,0 c99.082-53.17,113.876-111.689,113.876-141.839C377.723,310.59,349.095,273.754,308.487,273.754z M255.951,462.067 c-40.552-23.027-88.375-61.7-88.375-108.053c0-23.036,13.406-46.864,35.838-46.864c24.283,0,37.353,19.194,38.358,20.728 c6.479,10.84,21.879,10.838,28.357,0c1.005-1.534,14.075-20.728,38.358-20.728c22.432,0,35.838,23.827,35.838,46.864 C344.325,400.379,296.502,439.04,255.951,462.067z"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-              <p>Cuidado</p>
-            </article>
-          </div>
-        </article>
-      </section>
-
-      <style>
-        .container2 {
-          width: 95%;
-          margin: 0 auto;
-          margin-block: clamp(0.8rem, 10vh, 1.6rem);
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          gap: clamp(0.8rem, 10vh, 1.5rem);
-          box-sizing: border-box;
-          padding: clamp(0.8rem, 10vh, 1.2rem);
-        }
-
-        .container2 header {
-          width: 100%;
-          background-color: transparent;
-          text-align: center;
-          font-family: "Sora-Bold";
-          color: var(--tercero);
-
-          h2 {
-            margin: 0;
-          }
-        }
-
-        .services {
-          width: 95%;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          justify-content: center;
-          align-content: center;
-          margin: 0 auto;
-          gap: clamp(0.8rem, 10vh, 1.6rem);
-
-          header {
-            width: 100%;
-          }
-
-          p {
-            font-size: clamp(0.5rem, 8vh, 1.1rem);
-          }
-        }
-
-        .services article:first-child {
-          flex: 1 1 450px;
-          max-width: 100%;
-
-          header h3 {
-            margin: 0;
-            padding: 0;
-          }
-
-          .primero {
-            text-align: center;
-          }
-
-          .segundo {
-            text-align: start;
-          }
-        }
-
-        .services article:last-child {
-          flex: 1 1 450px;
-          max-width: 100%;
-
-          header h3 {
-            margin: 0;
-            padding: 0;
-          }
-
-          .primero {
-            text-align: center;
-          }
-
-          .segundo {
-            text-align: start;
-          }
-        }
-      </style>
-
-      <section class="container2" id="services">
-        <header>
-          <h2>Servicios</h2>
-        </header>
-
-        <div class="services">
-          <article>
-            <header>
-              <h3>Choque de aminoácidos</h3>
-            </header>
-
-            <p class="primero">¿Cabello reseco? Esta es la solución</p>
-            <p class="segundo">
-              El choque de aminoácidos actúa directo en la fibra capilar,
-              penetrando donde el cabello más lo necesita. Esta combinación
-              inteligente repone la hidratación, fortalece desde adentro y sella
-              la suavidad, dejando el pelo visiblemente más sano, brillante y
-              manejable desde la primera aplicación. Cuidado real, resultados
-              que se sienten.
-            </p>
-          </article>
-
-          <article>
-            <header>
-              <h3>Keratina progresiva</h3>
-            </header>
-
-            <p class="primero">¿Frizz incontrolable? Necesitas una keratina</p>
-            <p class="segundo">
-              La keratina ayuda a alinear y suavizar la fibra capilar,
-              reduciendo el frizz y facilitando un alisado natural y duradero.
-              Su acción nutritiva mejora la textura del cabello, aportando
-              brillo, disciplina y una apariencia visiblemente más prolija sin
-              perder movimiento. Cabello más liso, más manejable y con un
-              acabado hermoso.
-            </p>
-          </article>
-        </div>
-
-        <style>
-          .container2 footer {
-            width: 100%;
-            text-align: center;
-            color: var(--tercero);
-            font-family: "Sora-Bold";
-          }
-
-          .container2 footer h3 {
-            margin: 0;
-            padding: 0;
-          }
-        </style>
-
-        <footer>
-          <h3>Recuerda... No vendemos el producto, lo aplicamos</h3>
-        </footer>
-      </section>
-
-      <style>
-        .container3 {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          gap: clamp(0.8rem, 10vh, 1.5rem);
-
-          header {
-            background-color: transparent;
-          }
-
-          header h2 {
-            margin: 0;
-            color: var(--tercero);
-            font-family: "Sora-Bold";
-            margin: 0 auto;
-            text-align: center;
-          }
-        }
-
-        .gridus {
-          width: 92%;
-          display: grid;
-          justify-content: center;
-          align-content: center;
-          grid-template-columns: repeat(6, 1fr);
-          gap: clamp(0.5rem, 10vh, 0.8rem);
-          grid-template-areas:
-            "location1 info1 info1 info1 contactiner1 contactiner1"
-            "contactiner2 contactiner2 info2 info2 info2 location2";
-          justify-content: center;
-          margin: 0 auto;
-        }
-
-        .gridus > div {
-          border-radius: clamp(0.4rem, 4vh, 0.6rem);
-          box-shadow:
-            0 8px 12px rgba(18, 0, 36, 0.192),
-            inset 0 0 12px rgba(18, 0, 36, 0.35);
-        }
-
-        .gridus div:nth-child(1) {
-          grid-area: location1;
-          background-color: var(--tercero);
-        }
-
-        .gridus div:nth-child(2) {
-          grid-area: info1;
-          background-color: var(--segundo);
-        }
-
-        .gridus div:nth-child(3) {
-          grid-area: contactiner1;
-          background-color: var(--primero);
-          box-sizing: border-box;
-        }
-
-        .gridus div:nth-child(4) {
-          grid-area: location2;
-          background-color: var(--tercero);
-        }
-
-        .gridus div:nth-child(5) {
-          grid-area: info2;
-          background-color: var(--segundo);
-        }
-
-        .gridus div:nth-child(6) {
-          grid-area: contactiner2;
-          background-color: var(--primero);
-        }
-      </style>
-
-      <style>
-        @media (width <= 700px) {
-          .gridus {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas:
-              "location1 info1 info1 contactiner1"
-              "contactiner2 info2 info2 location2";
-          }
-        }
-
-        @media (width <= 500px) {
-          .gridus {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-areas:
-              "location1"
-              "contactiner1"
-              "info1"
-              "location2"
-              "contactiner2"
-              "info2";
-          }
-        }
-
-        .info-us {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-        }
-
-        .info-us p {
-          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
-        }
-
-        .city {
-          display: flex;
-          flex-wrap: wrap;
-          align-content: center;
-          justify-content: center;
-        }
-
-        .city h3 {
-          margin: 0 auto;
-          padding: clamp(0.4rem, 10vh, 0.6rem);
-          font-family: "Sora-Bold";
-          color: var(--segundo);
-          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
-          text-align: center;
-        }
-
-        .contactiner {
-          padding-block: clamp(1.4rem, 10vh, 2rem);
-          display: flex;
-          flex-wrap: wrap;
-          align-content: center;
-          justify-content: center;
-          box-sizing: border-box;
-          gap: clamp(0.4rem, 10vh, 0.8rem);
-        }
-
-        .contactiner h3 {
-          margin: 0 auto;
-          padding: 0;
-          font-family: "Sora-Bold";
-          color: var(--tercero);
-          padding-inline: clamp(0.8rem, 10vh, 1.2rem);
-          text-align: center;
-        }
-
-        .contactiner ul {
-          gap: 0;
-          align-content: center;
-          justify-content: center;
-          list-style: none;
-          display: flex;
-          flex-flow: column;
-          flex-wrap: wrap;
-        }
-
-        .contactiner ul li {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-          margin: 0;
-          text-align: center;
-        }
-
-        .contactiner ul li a {
-          font-family: "RedditSans-Light";
-          text-decoration: none;
-          box-sizing: border-box;
-          color: var(--tercero);
-          text-align: center;
-          padding: clamp(0.1rem, 5vh, 0.4rem);
-          margin: 0 auto;
-          margin-block: clamp(0.1rem, 5vh, 0.2rem);
-        }
-
-        .contactiner ul li a:hover {
-          color: var(--segundo);
-          background-color: var(--tercero);
-        }
-      </style>
-
-      <section class="container3" id="us">
-        <header>
-          <h2>Nosotras</h2>
-        </header>
-        <article class="gridus">
-          <div class="city">
-            <h3>Bogotá D.C</h3>
-          </div>
-
-          <div class="info-us">
-            <p>
-              Soy <strong>Nury Castillo</strong>, especialista en keratina y
-              tratamientos de choque para devolverle vida, suavidad y brillo a
-              tu cabello. Resultados visibles desde la primera sesión.
-            </p>
-          </div>
-
-          <div class="contactiner">
-            <h3>Contacto</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://wa.me/573133652835"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  +57 313 365 2835
-                </a>
-              </li>
-              <li>
-                <a href="mailto:nujucas@gmail.com"> nujucas@gmail.com </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="city">
-            <h3>Fusagasugá</h3>
-          </div>
-
-          <div class="info-us">
-            <p>
-              Soy <strong>Marcela Castillo</strong>, ofrezco tratamientos de
-              keratina y choque capilar para un cabello más sano, manejable y
-              brillante. Ideal para cabello maltratado o con frizz.
-            </p>
-          </div>
-
-          <div class="contactiner">
-            <h3>Contacto</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://wa.me/573246106598"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  +57 324 610 6598
-                </a>
-              </li>
-              <li>
-                <a href="mailto:marce-2283@hotmail.com">
-                  marce-2283@hotmail.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <footer></footer>
-  </body>
 </html>
